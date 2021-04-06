@@ -1,0 +1,43 @@
+require: rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - '.bundle/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - '**/config/**/*'
+    - 'node_modules/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - 'spec/factories/**'
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/NestedGroups:
+  Max: 5
+
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
