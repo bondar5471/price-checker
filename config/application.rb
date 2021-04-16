@@ -10,6 +10,8 @@ module PriceChecker
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.eager_load_paths << Rails.root.join('lib')
+    config.api_only = true
 
     # Configuration for the application, engines, and railties goes here.
     #

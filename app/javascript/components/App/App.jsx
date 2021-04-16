@@ -1,5 +1,16 @@
 import React from 'react';
+import Routes from '../Routes';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Account } from '../../lib/Accounts';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
-  return <h1>Home page</h1>;
+  return (
+    <Account>
+      <Router>
+        <Routes />
+      </Router>
+    </Account>
+  );
 }
